@@ -3,7 +3,7 @@ Given(/^I have no cheese$/) do
 end
 
 When(/^I press the make cheese button$/) do
-  puts "There is hope. I hope this works!"  
+  puts "There is hope. I hope this works!"
 end
 
 Then(/^I expect to have cheese$/) do

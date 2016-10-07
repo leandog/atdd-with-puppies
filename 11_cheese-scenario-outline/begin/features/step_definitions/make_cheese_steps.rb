@@ -4,7 +4,7 @@ Given(/^I have no cheese$/) do
 end
 
 When(/^I press the make blue cheese button$/) do
-  puts 'Make cheese button pressed' 
+  puts 'Make cheese button pressed'
   #Comment the following line out to verify that the test works correctly
   @cheese = 'blue cheese'
 end

@@ -1,7 +1,7 @@
 module AdoptionHelper
- 
+
   def goto_puppy_adoption_site
-    @browser=Watir::Browser.new
+    @browser = Watir::Browser.new :chrome, switches: ['--use-gl=angle']
     @browser.goto 'http://puppies.herokuapp.com'
   end
 
@@ -16,8 +16,8 @@ module AdoptionHelper
 
   def checkout_with(name, address, email, pay_type)
     @browser.button(:value => 'Complete the Adoption').click
-    @browser.text_field(:id => 'order_name').value = name 
-    @browser.textarea(:id => 'order_address').value = address 
+    @browser.text_field(:id => 'order_name').value = name
+    @browser.textarea(:id => 'order_address').value = address
     @browser.text_field(:id => 'order_email').value = email
     @browser.select_list(:id => 'order_pay_type').select pay_type
     @browser.button(:value => 'Place Order').click
