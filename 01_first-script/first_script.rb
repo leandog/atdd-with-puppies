@@ -1,4 +1,4 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 browser = Watir::Browser.new :firefox
 browser.goto 'http://google.com'

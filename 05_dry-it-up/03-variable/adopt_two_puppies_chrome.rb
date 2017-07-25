@@ -1,12 +1,12 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 
 def adopt_puppy_number(puppy_number)
   @browser.button(:value => 'View Details', :index => puppy_number - 1).click
   @browser.button(:value => 'Adopt Me!').click
 end
 
-@browser = Watir::Browser.new :chrome, switches: ['--use-gl=angle']
+@browser = Watir::Browser.new :chrome
 @browser.goto 'http://puppies.herokuapp.com'
 adopt_puppy_number(1)
 @browser.button(:value => 'Adopt Another Puppy').click

@@ -1,8 +1,8 @@
-require 'watir-webdriver'
+require 'watir'
 
 
 Before do
-  @browser = Watir::Browser.new :chrome, switches: ['--use-gl=angle']
+  @browser = Watir::Browser.new :chrome
 end
 
 After do

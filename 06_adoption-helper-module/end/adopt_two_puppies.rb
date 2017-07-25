@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 require_relative 'adoption_helper_module'
 
 include AdoptionHelper

@@ -1,8 +1,8 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 
 def goto_puppy_adoption_site
-  @browser = Watir::Browser.new :chrome, switches: ['--use-gl=angle']
+  @browser = Watir::Browser.new :chrome
   @browser.goto 'http://puppies.herokuapp.com'
 end
 

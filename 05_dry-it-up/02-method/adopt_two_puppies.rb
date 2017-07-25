@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 
 def adopt_puppy_number(puppy_number, browser)
   browser.button(:value => 'View Details', :index => puppy_number - 1).click

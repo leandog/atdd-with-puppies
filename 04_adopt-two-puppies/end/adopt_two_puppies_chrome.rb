@@ -1,7 +1,7 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 
-browser = Watir::Browser.new :chrome, switches: ['--use-gl=angle']
+browser = Watir::Browser.new :chrome
 browser.goto 'http://puppies.herokuapp.com'
 
 browser.button(:value => 'View Details', :index => 0).click

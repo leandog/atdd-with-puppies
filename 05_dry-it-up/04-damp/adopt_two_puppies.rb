@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'watir-webdriver'
+require 'watir'
 
 def goto_puppy_adoption_site
   @browser=Watir::Browser.new
