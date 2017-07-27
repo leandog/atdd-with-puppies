@@ -1,5 +1,0 @@
-Begin with an empty project:
-
-	testgen project <project> --pageobject-driver=watir
- 
-Adopt a puppy using Cucumber step definitions. Complete the adoption and verify the adoption succeeded.  

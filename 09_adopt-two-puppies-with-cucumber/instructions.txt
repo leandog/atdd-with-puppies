@@ -1,5 +1,0 @@
-Begin with the scenario for adopting one puppy with Cucumber. 
-
-Now create a scenario which will adopt the first and second puppies in the list using Cucumber step definitions. 
-
-Complete the adoption and verify the adoption succeeded.  

@@ -1,3 +1,0 @@
-The four given scenarios differ only in the specific accessory that they verify on the shopping cart page.
-
-Refactor the provided scenarios into a single scenario outline.  
