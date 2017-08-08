@@ -31,6 +31,15 @@ Feature: As a dog lover
     And I click on "Adopt Me!"
     Then I see the second puppy in my litter
 
+  Scenario: Be able to change my mind removes all puppies from my litter
+    Given I have added a puppy to my litter
+    And I click on "Adopt Another Puppy"
+    And I click on the second puppy
+    And I click on "Adopt Me!"
+    When I click on "Change your mind"
+    Then I see the home page
+    And I see "Your cart is currently empty"
+
   Scenario: Add accessories to a puppy and the price change is reflected
     Given I have added a puppy to my litter
     When I add a Collar & Leash to my order
