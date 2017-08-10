@@ -10,14 +10,14 @@ Feature: As a dog lover
   Scenario: Be able to return to the view of all available puppies
     Given I am on the home page
     When I click on the first puppy
-    And I click on "Return to list"
+    And I click on "Return to List"
     Then I see the home page
 
   Scenario: Be able to add the puppy to adopt later
     Given I am on the home page
     When I click on the first puppy
     And I click on "Adopt Me!"
-    Then I the puppy is in my litter
+    Then I see the puppy is in my litter
 
   Scenario: Be able to change my mind about adopting a puppy
     Given I have added a puppy to my litter
