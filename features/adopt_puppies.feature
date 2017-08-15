@@ -4,18 +4,18 @@ Feature: As a dog lover
 
   Scenario: Be able to view the details of a puppy
     Given I am on the home page
-    When I click on the first puppy
+    When I click on the puppy "Brooke"
     Then I see "Adopt Me!"
 
   Scenario: Be able to return to the view of all available puppies
     Given I am on the home page
-    When I click on the first puppy
+    When I click on the puppy "Brooke"
     And I click on "Return to List"
     Then I see the home page
 
   Scenario: Be able to add the puppy to adopt later
     Given I am on the home page
-    When I click on the first puppy
+    When I click on the puppy "Brooke"
     And I click on "Adopt Me!"
     Then I see the first puppy in my litter
 
@@ -27,14 +27,14 @@ Feature: As a dog lover
   Scenario: Be able to add another puppy to my litter
     Given I have added a puppy to my litter
     When I click on "Adopt Another Puppy"
-    And I click on the second puppy
+    And I click on the puppy "Ruby Sue"
     And I click on "Adopt Me!"
     Then I see the second puppy in my litter
 
   Scenario: Be able to change my mind removes all puppies from my litter
     Given I have added a puppy to my litter
     And I click on "Adopt Another Puppy"
-    And I click on the second puppy
+    And I click on the puppy "Ruby Sue"
     And I click on "Adopt Me!"
     When I click on "Change your mind"
     Then I see the home page
