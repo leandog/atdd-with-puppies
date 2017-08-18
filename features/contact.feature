@@ -2,12 +2,12 @@ Feature: As a user of the site
   I want to be able to contact the agency
   So that I can ask pertinent questions
 
-  Scenario: Get to the contact form
+  Scenario: #1 Get to the contact form
     Given I am on the home page
     When I tap on the email icon
     Then I see "Contact"
 
-  Scenario: Submit a message
+  Scenario: #2 Submit a message
     Given I am on the home page
     When I tap on the email icon
     And I fill the form in with the following values:
@@ -18,7 +18,7 @@ Feature: As a user of the site
     And I click "Send"
     Then I see "Thank you for contacting us!"
 
-  Scenario Outline: All fields are required to send a message to the agency
+  Scenario Outline: #3 All fields are required to send a message to the agency
     Given I am on the home page
     When I tap on the email icon
     And the contact form is completely filled in
