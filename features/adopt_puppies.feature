@@ -61,7 +61,7 @@ Feature: As a dog lover
   Scenario Outline: All fields are required to complete an adoption
     Given I have added a puppy to my litter
     When I tap "Complete the Adoption"
-    And everything is filled in
+    And the order form is completely filled in
     And I yet leave <element> blank
     And I click "Place Order"
     Then I see "<error>"
