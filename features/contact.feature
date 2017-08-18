@@ -15,6 +15,7 @@ Feature: As a user of the site
       | contact_message_name  | Joe Sixpack                                        |
       | contact_message_email | joe@sixpack.com                                    |
       | contact_message_body  | I am having trouble adopting a puppy. Please help! |
+    And I click "Send"
     Then I see "Thank you for contacting us!"
 
   Scenario Outline: All fields are required to send a message to the agency
