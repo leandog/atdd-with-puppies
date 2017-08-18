@@ -46,11 +46,6 @@ Feature: As a dog lover
     And I add a Chew Toy to my order
     Then I see "$92.91"
 
-  Scenario: Be able to fill in adoption info
-    Given I have added a puppy to my litter
-    When I tap "Complete the Adoption"
-    Then I see "Please Enter Your Details"
-
   Scenario: Complete an adoption
     Given I have added a puppy to my litter
     When I tap "Complete the Adoption"
