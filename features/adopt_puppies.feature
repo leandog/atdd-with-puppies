@@ -17,7 +17,7 @@ Feature: As a dog lover
     Given I am on the home page
     When I click on the puppy "Brooke"
     And I click on "Adopt Me!"
-    Then I see the first puppy in my litter
+    Then I see the puppy "Brooke" is in my litter
 
   Scenario: Be able to change my mind about adopting a puppy
     Given I have added a puppy to my litter
@@ -29,7 +29,7 @@ Feature: As a dog lover
     When I click on "Adopt Another Puppy"
     And I click on the puppy "Ruby Sue"
     And I click on "Adopt Me!"
-    Then I see the second puppy in my litter
+    Then I see the puppy "Ruby Sue" is in my litter
 
   Scenario: Be able to change my mind removes all puppies from my litter
     Given I have added a puppy to my litter
