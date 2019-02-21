@@ -1,3 +1,4 @@
+@ignore
 Feature: As a user of the site
   I want to be able to have online discussions
   So that I can learn from other dog enthusiasts
@@ -6,22 +7,27 @@ Feature: As a user of the site
     Given I am on the home page
     And I click on "Message Boards"
 
-  Scenario: Create a new topic thread
-    When I click on "New Topic"
-    And I fill the form in with the following values:
-      | element            | value                                    |
-      | discussion_title   | "Who else here likes Colden Retrievers?" |
-      | discussion_message | "Goldens are the best!" |
-    And I click "Finish"
-    Then I see a thread titled "Who else here likes Colden Retrievers?"
+  Scenario: #1 Can access the Message Boards
+    Then I see the heading "Message Boards"
 
-  Scenario: Create a reply to a thread
+  @data_purge
+  Scenario: #2 Create a new topic thread
+    When I click on "Post a Message"
+    And I fill the form in with the following values:
+      | element                  | value                 |
+      | discussion_post_nickname | goldeneye1942         |
+      | discussion_post_body     | Goldens are the best! |
+    And I click on "Post"
+    Then I see a post with the message "Goldens are the best!"
+
+  @data_purge
+  Scenario: #3 Create a reply to a thread
     Given I have an existing thread
     When I click on "Reply"
     And I fill the form in with the following values:
-      | element            | value                   |
-      | discussion_message | "+1 They are so mild mannered." |
-    And I click "Finish"
-    Then I see a reply with the message "+1 They are so mild mannered."
-
+      | element                  | value                         |
+      | discussion_post_nickname | poochtroop32                  |
+      | discussion_post_body     | +1 They are so mild mannered. |
+    And I click on "Post"
+    Then I see a post with the message "+1 They are so mild mannered."
 
