@@ -1,5 +1,5 @@
-default: --no-source --color --format pretty --fail-fast --tags ~@not_ready --tags ~@javascript --tags ~@wip --tags ~@ignore
+default: --no-source --color --format pretty --fail-fast --tags 'not @not_ready' --tags 'not @javascript' --tags 'not @wip' --tags 'not @ignore'
 wip: --no-source --color --format pretty --fail-fast --tags @wip
 js: --no-source --color --format pretty --fail-fast --tags @javascript
-autotest: --no-source --color --format pretty --fail-fast --tags ~@not_ready
+autotest: --no-source --color --format pretty --fail-fast --tags 'not @not_ready'
 
