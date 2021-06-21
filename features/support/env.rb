@@ -1,3 +1,4 @@
+# require 'webdrivers'
 require 'rspec'
 require 'watir'
 
@@ -7,7 +8,7 @@ Before do |scenario|
   # description, or name (title + description) of the scenario that is about to be
   # executed.
   unless @browser
-    @browser = Watir::Browser.new :chrome
+    @browser = Watir::Browser.new :chrome, headless: true
   end
 end
 
